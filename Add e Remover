@@ -1,0 +1,39 @@
+// o erro foi corrigido pelo chatgpt por isso que está parecendo que foi feito por ia
+let Lista = [];
+
+function main() {
+    let Menu = prompt('Escolha uma opção:' + '\n' + '1. Adicionar Item' + '\n' + '2. Remover Item' + '\n' + '3. Mostrar Lista' + '\n' + '4. Sair');
+
+    switch(Menu){
+        case '1':
+            let Add = prompt('Digite o produto para ser adicionado');
+            Lista.push(Add);
+            alert('Produto adicionado');
+            break;
+
+        case '2':
+            let rem = prompt('Digite o produto para ser removido');
+            Lista.pop(rem);
+            
+            break;
+
+        case '3':
+            Lista.forEach(function(item) {
+                alert(item);
+                
+            });
+            break;
+
+        case '4':
+            return; 
+
+        default:
+            alert('Opção Inválida');
+            break;
+    }
+
+    main(); 
+}
+
+main(); 
+
